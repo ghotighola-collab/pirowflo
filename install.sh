@@ -26,7 +26,7 @@ echo "-------------------------------------------------------------"
 echo "updates the list of latest updates available for the packages"
 echo "-------------------------------------------------------------"
 echo " "
-#sudo apt-get update
+sudo apt-get update
 
 echo " "
 echo "----------------------------------------------"
@@ -34,22 +34,22 @@ echo "install needed packages for python          "
 echo "----------------------------------------------"
 echo " "
 
-#sudo apt-get install -y \
-#    python3 \
-#    python3-gi \
-#    python3-gi-cairo \
-#    gir1.2-gtk-3.0 \
-#    python3-pip \
-#    libatlas-base-dev \
-#    libdbus-1-dev \
-#    libglib2.0-dev \
-#    libgirepository1.0-dev \
-#    libcairo2-dev \
-#    zlib1g-dev \
-#    libfreetype6-dev \
-#    liblcms2-dev \
-#    libopenjp2-7 \
-#    libtiff5
+sudo apt-get install -y \
+    python3 \
+    python3-gi \
+    python3-gi-cairo \
+    gir1.2-gtk-3.0 \
+    python3-pip \
+    libatlas-base-dev \
+    libdbus-1-dev \
+    libglib2.0-dev \
+    libgirepository1.0-dev \
+    libcairo2-dev \
+    zlib1g-dev \
+    libfreetype6-dev \
+    liblcms2-dev \
+    libopenjp2-7 \
+    libtiff6
 
 echo " "
 echo "----------------------------------------------"
@@ -57,9 +57,8 @@ echo "set up virtual environment        "
 echo "----------------------------------------------"
 echo " "
 
-#python3 -m venv venv
-#sleep 10
-#source venv/bin/activate
+python3 -m venv venv
+source venv/bin/activate
 
 echo " "
 echo "----------------------------------------------"
@@ -67,8 +66,8 @@ echo "install needed python3 modules for the project        "
 echo "----------------------------------------------"
 echo " "
 
-#pip install --upgrade pip
-#pip install -r requirements.txt
+pip install --upgrade pip
+pip install -r requirements.txt
 
 echo " "
 echo "-------------------------------------------------------"
@@ -171,7 +170,7 @@ echo " setup screen setting to start up at boot                   "
 echo "------------------------------------------------------------"
 echo " "
 
-sudo sed -i 's/#dtparam=spi=on/dtparam=spi=on/g' /boot/config.txt
+sudo sed -i 's/#dtparam=spi=on/dtparam=spi=on/g' /boot/firmware/config.txt
 cp src/adapters/screen/settings.ini.orig src/adapters/screen/settings.ini
 sudo sed -i 's@#REPO_DIR#@'"$repo_dir"'@g' src/adapters/screen/settings.ini
 
