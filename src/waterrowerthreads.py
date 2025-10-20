@@ -113,7 +113,7 @@ def main(args=None):
 
     if args.interface == "ftms":
         logger.info("interface ftms will be used for data input")
-        t = threading.Thread(target=FTMS_rower, args=(q, ble_q, ant_q))
+        t = threading.Thread(target=FTMSrower, args=(q, ble_q, ant_q))
         t.daemon = True
         t.start()
         threads.append(t)
