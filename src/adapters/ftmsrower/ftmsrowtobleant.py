@@ -20,7 +20,7 @@ class DataLogger():
     #        |  +--+- Total Strokes
     #        |  |  |  +--+--+- Total Distance
     #        |  |  |  |  |  |  +--+- Instantaneous Pace
-    #        |  |  |  |  |  |  |  |  +--+- Instanteous Power
+    #        |  |  |  |  |  |  |  |  +--+- Instantaneous Power (watts)
     #        |  |  |  |  |  |  |  |  |  |  +--+- Total Energy
     #        |  |  |  |  |  |  |  |  |  |  |  |  +--+- Energy_per_hour
     #        |  |  |  |  |  |  |  |  |  |  |  |  |  |  +- Energy Per Minute
@@ -118,8 +118,8 @@ class DataLogger():
             self.elapsedtime()
 
             print(self.WRValues)
-            print("| H|R| TS|   TD| IP| Wa| TE| TH|M|time")
-            print(event.hex())
+            #print("| H|R| TS|   TD| IP| Wa| TE| TH|M|time")
+            #print(event.hex())
 
 
 def connectFTMS(manager,ftms):
