@@ -146,7 +146,7 @@ def main(args=None):
 if __name__ == '__main__':
     try:
         parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawTextHelpFormatter, )
-        parser.add_argument("-i", "--interface", choices=["ftms","s4","sr"], default="s4", help="choose  Waterrower interface S4 monitor: s4 or Smartrow: sr or Cityrow: cr")
+        parser.add_argument("-i", "--interface", choices=["ftms","s4","sr"], default="s4", help="choose  Waterrower interface S4 monitor: s4 or Smartrow: sr or FTMS Rower: ftms")
         parser.add_argument("-b", "--blue", action='store_true', default=False,help="Broadcast Waterrower data over bluetooth low energy")
         parser.add_argument("-a", "--antfe", action='store_true', default=False,help="Broadcast Waterrower data over Ant+")
         args = parser.parse_args()
