@@ -16,7 +16,7 @@ class DataLogger():
     # INDEXES are [index, length]
     # referencing later by [index:index + length] notation
     # All little endian?
-    #        +- Strokes per 1/2 second
+    #        +- Strokes per 2 seconds
     #        |  +--+- Total Strokes
     #        |  |  |  +--+--+- Total Distance
     #        |  |  |  |  |  |  +--+- Instantaneous Pace
